@@ -1,0 +1,17 @@
+ecs_image      = "ubuntu_22_04_x64_20G_alibase_20221130.vhd"
+region         = "ap-southeast-5"
+org_name       = "xxxxxx"
+env_prod       = "production"
+env_short_prod = "prod"
+env_dev        = "development"
+env_short_dev  = "dev"
+
+vpc_cidr_block            = "xxxx/12"
+vpn_client_ip             = "xxxx/24"
+operation_cidr_template   = "xxxx"
+development_cidr_template = "xxxx"
+production_cidr_template = "xxxx"
+
+# vpc_cidr_block          = "xxxx/12"
+# operation_cidr_template = "xxxx"
+# vpn_client_ip           = "xxxx/24"
