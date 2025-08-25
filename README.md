@@ -1,3 +1,4 @@
+# reusable-terraform
 # terraform-templete
 
 First you need to install terraform in local computer by following this site https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli. this is the example of installing terraform in OS ubuntu.
@@ -5,11 +6,11 @@ Ensure that your system is up to date, and you have the gnupg, software-properti
 
 # clone repository to local computer
 
-After terraform instalation has done. you can clone this github repository to your local computer. This terraform configuration will be provisioning infrastucture with alicloud platform.
+After terraform instalation has done. you can clone this github repository to your local computer. This terraform configuration will be provisioning infrastucture with aws platform.
 
 # terraform description
 
-In the main.tf file, there are few configuration to create Instance in ali cloud. for this configuraton, Instance will use existing vpc and vswith. To run the terraform configuration, you need to create access_key and secret_key from your console alicloud account. Go to your alicloud console , search for accesskey management. then create you access accesskey. Then in vaiables.tf file, define your access_key, secret_key and region of your alicloud.
+In the main.tf file, there are few configuration to create Instance in aws cloud. for this configuraton, Instance will use existing vpc and vswith. To run the terraform configuration, you need to create access_key and secret_key from your console aws account. Go to your aws console , search for accesskey management. then create you access accesskey. Then in vaiables.tf file, define your access_key, secret_key and region of your aws.
 
 # Running terraform configuraton
 

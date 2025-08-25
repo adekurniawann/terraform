@@ -1,9 +1,7 @@
-output "eks_role_arn" {
-  description = "ARN of the EKS IAM Role"
-  value       = aws_iam_role.eks_role.arn
+output "iam_role_name" {
+  value = aws_iam_role.this.name
 }
 
-output "node_group_role_arn" {
-  description = "ARN of the Node Group IAM Role"
-  value       = aws_iam_role.node_group_role.arn
+output "iam_role_arn" {
+  value = aws_iam_role.this.arn
 }

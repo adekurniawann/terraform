@@ -1,24 +1,13 @@
-variable "cluster_name" {
-  description = "The name of the EKS cluster"
-  type        = string
+variable "cluster_name" { type = string }
+variable "cluster_role_arn" { type = string }
+variable "node_role_arn" { type = string }
+variable "subnet_ids" { type = list(string) }
+
+variable "node_instance_types" {
+  type    = list(string)
+  default = ["t3.medium"]
 }
 
-variable "cluster_version" {
-  description = "The Kubernetes version for the EKS cluster"
-  type        = string
-}
-
-variable "vpc_id" {
-  description = "VPC ID for the EKS cluster"
-  type        = string
-}
-
-variable "subnets" {
-  description = "Subnets for the EKS cluster"
-  type        = list(string)
-}
-
-variable "tags" {
-  description = "Tags for EKS resources"
-  type        = map(string)
-}
+variable "desired_size" { type = number default = 2 }
+variable "max_size" { type = number default = 4 }
+variable "min_size" { type = number default = 1 }

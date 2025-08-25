@@ -1,29 +1,29 @@
 variable "name" {
-  description = "The name of the VPC"
   type        = string
+  description = "Name prefix for VPC"
 }
 
-variable "cidr" {
-  description = "CIDR block for the VPC"
+variable "cidr_block" {
   type        = string
+  description = "CIDR block for the VPC"
 }
 
 variable "azs" {
-  description = "List of availability zones"
   type        = list(string)
-}
-
-variable "private_subnets" {
-  description = "List of private subnets"
-  type        = list(string)
+  description = "Availability zones to use"
 }
 
 variable "public_subnets" {
-  description = "List of public subnets"
   type        = list(string)
+  description = "CIDR blocks for public subnets"
+}
+
+variable "private_subnets" {
+  type        = list(string)
+  description = "CIDR blocks for private subnets"
 }
 
 variable "tags" {
-  description = "Tags for the VPC resources"
-  type        = map(string)
+  type    = map(string)
+  default = {}
 }

@@ -1,9 +1,11 @@
-variable "cluster_name" {
-  description = "EKS Cluster Name"
-  type        = string
+variable "role_name" {
+  type = string
 }
 
-variable "tags" {
-  description = "Tags for resources"
-  type        = map(string)
+variable "service_principal" {
+  type = string
+}
+
+variable "policy_arn" {
+  type = string
 }
